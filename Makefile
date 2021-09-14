@@ -22,8 +22,7 @@ var (
 endef
 export VERSIONS_FILE
 
-#ci: version remod lint test package chart
-ci: version remod regenerate package
+ci: version remod checkfmt lint build test
 	@mkdir -p artifacts/
 	@echo "$(PROJECT_SHA)" > artifacts/src_sha
 	@echo "$(PROJECT_VERSION)" > artifacts/src_semver
@@ -70,8 +69,26 @@ lint: golangci-lint
 		--enable=unparam \
 		./...
 
+checkfmt:
+ifneq ($(shell { goimports -l ./pkg/apis/networkprismacloudio/ ; goimports -l ./pkg/generated/ ; }),)
+	@echo Please run \`make fmt\`
+	exit 1
+endif
+	@echo Success
+
 build:
 	go build ./...
+
+test:
+	go test ./... -race -cover -covermode=atomic -coverprofile=unit_coverage.cov
+
+##########################
+### non-public targets ###
+##########################
+
+fmt:
+	goimports -w ./pkg/apis/networkprismacloudio/
+	goimports -w ./pkg/generated/
 
 .PHONY:codegen
 codegen: get-codegen 
@@ -85,8 +102,7 @@ codegen: get-codegen
 #	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind PUTrafficAction
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind Enforcer --readonly true
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind EnforcerProfile 
-	goimports -w pkg/apis/networkprismacloudio/
-#	goimports -w pkg/generated/
+	make fmt
 
 regenerate: 
 	rm -rf ./pkg/apis/networkprismacloudio/
