@@ -1,5 +1,3 @@
-
-
 // Package v1 contains API Schema definitions for the networkprismacloudio v1 API group
 package v1
 
@@ -13,11 +11,13 @@ import (
 const GroupName = "network.prismacloud.io"
 
 // SchemeGroupVersion is group version used to register these objects
-var SchemeGroupVersion = schema.GroupVersion{Group: GroupName , Version: "v1"}
+var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: "v1"}
 
 var (
+	// SchemeBuilder registers the known types
 	SchemeBuilder = runtime.NewSchemeBuilder(addKnownTypes)
-	AddToScheme   = SchemeBuilder.AddToScheme
+	// AddToScheme applies all the stored functions to the scheme
+	AddToScheme = SchemeBuilder.AddToScheme
 )
 
 // Resource takes an unqualified resource and returns a Group qualified GroupResource
@@ -29,25 +29,25 @@ func Resource(resource string) schema.GroupResource {
 // TODO: we need to add all the API types in the schema over here.
 func addKnownTypes(scheme *runtime.Scheme) error {
 	scheme.AddKnownTypes(SchemeGroupVersion,
-&ClusterNetworkRuleSetPolicy{},
-&ClusterNetworkRuleSetPolicyList{},
-&ClusterExternalNetwork{},
-&ClusterExternalNetworkList{},
-&NetworkRuleSetPolicy{},
-&NetworkRuleSetPolicyList{},
-&ExternalNetwork{},
-&ExternalNetworkList{},
-&ProcessingUnit{},
-&ProcessingUnitList{},
-&ClusterProcessingUnit{},
-&ClusterProcessingUnitList{},
-&ClusterEnforcer{},
-&ClusterEnforcerList{},
-&ClusterEnforcerProfile{},
-&ClusterEnforcerProfileList{},
-// add types above this line
+		&ClusterNetworkRuleSetPolicy{},
+		&ClusterNetworkRuleSetPolicyList{},
+		&ClusterExternalNetwork{},
+		&ClusterExternalNetworkList{},
+		&NetworkRuleSetPolicy{},
+		&NetworkRuleSetPolicyList{},
+		&ExternalNetwork{},
+		&ExternalNetworkList{},
+		&ProcessingUnit{},
+		&ProcessingUnitList{},
+		&ClusterProcessingUnit{},
+		&ClusterProcessingUnitList{},
+		&ClusterEnforcer{},
+		&ClusterEnforcerList{},
+		&ClusterEnforcerProfile{},
+		&ClusterEnforcerProfileList{},
+		// add types above this line
 	)
-	
+
 	metav1.AddToGroupVersion(scheme, SchemeGroupVersion)
 	return nil
 }

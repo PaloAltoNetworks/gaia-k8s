@@ -71,9 +71,7 @@ lint: golangci-lint
 		./...
 
 build:
-	go build
-
-package: build
+	go build ./...
 
 .PHONY:codegen
 codegen: get-codegen 
@@ -90,30 +88,10 @@ codegen: get-codegen
 	goimports -w pkg/apis/networkprismacloudio/
 #	goimports -w pkg/generated/
 
-codegen-local:
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind NetworkRuleSetPolicy
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind ExternalNetwork 
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind NetworkRuleSetPolicy --namespaced true
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind ExternalNetwork --namespaced true
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind ProcessingUnit --namespaced true --readonly true
-#	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind PUTrafficAction --namespaced true
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind ProcessingUnit --readonly true
-#	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind PUTrafficAction
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind Enforcer --readonly true
-	../k8s-api-codegen/k8s-api-codegen create api --group networkprismacloudio --version v1 --kind EnforcerProfile 
-	goimports -w pkg/apis/networkprismacloudio/
-#	goimports -w pkg/generated/
-
 regenerate: 
 	rm -rf ./pkg/apis/networkprismacloudio/
 	rm -rf ./pkg/generated/
 	make codegen
-	make generate
-
-regenerate-local: 
-	rm -rf ./pkg/apis/networkprismacloudio/
-	rm -rf ./pkg/generated/
-	make codegen-local
 	make generate
 
 get-codegen: ## Download get-codegen.
