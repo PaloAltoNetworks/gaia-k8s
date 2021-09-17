@@ -4,7 +4,7 @@ export SHELL := /bin/bash -o pipefail
 export GO111MODULE = on
 export GOPRIVATE = go.aporeto.io,github.com/aporeto-inc
 
-default: version checkfmt lint test
+default: checkfmt lint test
 
 golangci-lint:
 ifeq (, $(shell which golangci-lint))
