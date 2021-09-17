@@ -1,44 +1,10 @@
 export MAKEFLAGS += --warn-undefined-variables
 export SHELL := /bin/bash -o pipefail
 
-export PROJECT_BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
-export PROJECT_SHA ?= $(shell git rev-parse HEAD)
-export PROJECT_VERSION ?= v0.0.0-dev
-export CHART_APP_VERSION = $(shell if [[ "$(PROJECT_VERSION)" == "v0.0.0-dev" ]]; then echo "master-staging"; else echo $(PROJECT_VERSION); fi)
-export PROJECT_RELEASE ?= dev
-
 export GO111MODULE = on
-export GOPRIVATE = go.aporeto.io,github.com/aporeto-inc,git.scm.prismacloud.io/prismacloud/pcn
+export GOPRIVATE = go.aporeto.io,github.com/aporeto-inc
 
-define VERSIONS_FILE
-package versions
-
-// Various version information.
-var (
-	ProjectVersion = "$(PROJECT_VERSION)"
-	ProjectSha     = "$(PROJECT_SHA)"
-	ProjectRelease = "$(PROJECT_RELEASE)"
-)
-endef
-export VERSIONS_FILE
-
-ci: version remod checkfmt lint build test
-	@mkdir -p artifacts/
-	@echo "$(PROJECT_SHA)" > artifacts/src_sha
-	@echo "$(PROJECT_VERSION)" > artifacts/src_semver
-	@echo "$(PROJECT_BRANCH)" > artifacts/src_branch
-
-version:
-	echo generating versions.go
-	mkdir -p versions
-	echo "$$VERSIONS_FILE" > versions/versions.go
-
-remod:
-	@cd /tmp && go get go.aporeto.io/remod@master
-	@case "${PROJECT_BRANCH}" in \
-	release-*) remod up go.aporeto.io --version "${PROJECT_BRANCH}" ;; \
-	*) remod up go.aporeto.io --version "master" ;; \
-	esac;
+default: checkfmt lint test
 
 golangci-lint:
 ifeq (, $(shell which golangci-lint))
@@ -75,9 +41,6 @@ ifneq ($(shell { goimports -l ./pkg/apis/networkprismacloudio/ ; goimports -l ./
 	exit 1
 endif
 	@echo Success
-
-build:
-	go build ./...
 
 test:
 	go test ./... -race -cover -covermode=atomic -coverprofile=unit_coverage.cov
