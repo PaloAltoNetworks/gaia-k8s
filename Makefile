@@ -42,9 +42,6 @@ ifneq ($(shell { goimports -l ./pkg/apis/networkprismacloudio/ ; goimports -l ./
 endif
 	@echo Success
 
-#build:
-#	go build ./...
-
 test:
 	go test ./... -race -cover -covermode=atomic -coverprofile=unit_coverage.cov
 
