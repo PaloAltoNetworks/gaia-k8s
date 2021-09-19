@@ -93,6 +93,23 @@ type ProcessingUnitList struct {
 	Items           []ProcessingUnit `json:"items"`
 }
 
+// PUTrafficAction is the Schema for the PUTrafficActions API
+// +genclient
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+type PUTrafficAction struct {
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+	Spec              gaia.SparsePUTrafficAction `json:"spec,omitempty"`
+}
+
+// PUTrafficActionList contains a list of PUTrafficAction
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+type PUTrafficActionList struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata,omitempty"`
+	Items           []PUTrafficAction `json:"items"`
+}
+
 // ClusterProcessingUnit is the Schema for the ProcessingUnits API
 // +genclient
 // +genclient:readonly
@@ -110,6 +127,24 @@ type ClusterProcessingUnitList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
 	Items           []ClusterProcessingUnit `json:"items"`
+}
+
+// ClusterPUTrafficAction is the Schema for the PUTrafficActions API
+// +genclient
+// +genclient:nonNamespaced
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+type ClusterPUTrafficAction struct {
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+	Spec              gaia.SparsePUTrafficAction `json:"spec,omitempty"`
+}
+
+// ClusterPUTrafficActionList contains a list of PUTrafficAction
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+type ClusterPUTrafficActionList struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata,omitempty"`
+	Items           []ClusterPUTrafficAction `json:"items"`
 }
 
 // ClusterEnforcer is the Schema for the Enforcers API

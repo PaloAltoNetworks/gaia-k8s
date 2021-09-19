@@ -60,9 +60,9 @@ codegen: get-codegen
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind NetworkRuleSetPolicy --namespaced true
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind ExternalNetwork --namespaced true
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind ProcessingUnit --namespaced true --readonly true
-#	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind PUTrafficAction --namespaced true
+	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind PUTrafficAction --namespaced true
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind ProcessingUnit --readonly true
-#	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind PUTrafficAction
+	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind PUTrafficAction
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind Enforcer --readonly true
 	k8s-api-codegen create api --group networkprismacloudio --version v1 --kind EnforcerProfile 
 	make fmt

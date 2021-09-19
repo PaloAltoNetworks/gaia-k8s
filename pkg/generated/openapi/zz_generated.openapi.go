@@ -37,12 +37,16 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterExternalNetworkList":      schema_pkg_apis_networkprismacloudio_v1_ClusterExternalNetworkList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterNetworkRuleSetPolicy":     schema_pkg_apis_networkprismacloudio_v1_ClusterNetworkRuleSetPolicy(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterNetworkRuleSetPolicyList": schema_pkg_apis_networkprismacloudio_v1_ClusterNetworkRuleSetPolicyList(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficAction":          schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficAction(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficActionList":      schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficActionList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterProcessingUnit":           schema_pkg_apis_networkprismacloudio_v1_ClusterProcessingUnit(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterProcessingUnitList":       schema_pkg_apis_networkprismacloudio_v1_ClusterProcessingUnitList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ExternalNetwork":                 schema_pkg_apis_networkprismacloudio_v1_ExternalNetwork(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ExternalNetworkList":             schema_pkg_apis_networkprismacloudio_v1_ExternalNetworkList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.NetworkRuleSetPolicy":            schema_pkg_apis_networkprismacloudio_v1_NetworkRuleSetPolicy(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.NetworkRuleSetPolicyList":        schema_pkg_apis_networkprismacloudio_v1_NetworkRuleSetPolicyList(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficAction":                 schema_pkg_apis_networkprismacloudio_v1_PUTrafficAction(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficActionList":             schema_pkg_apis_networkprismacloudio_v1_PUTrafficActionList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ProcessingUnit":                  schema_pkg_apis_networkprismacloudio_v1_ProcessingUnit(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ProcessingUnitList":              schema_pkg_apis_networkprismacloudio_v1_ProcessingUnitList(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                           schema_pkg_apis_meta_v1_APIGroup(ref),
@@ -460,6 +464,96 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterNetworkRuleSetPolicyList(ref
 	}
 }
 
+func schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "ClusterPUTrafficAction is the Schema for the PUTrafficActions API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.aporeto.io/gaia.SparsePUTrafficAction"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.SparsePUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficActionList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "ClusterPUTrafficActionList contains a list of PUTrafficAction",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficAction"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
 func schema_pkg_apis_networkprismacloudio_v1_ClusterProcessingUnit(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -727,6 +821,96 @@ func schema_pkg_apis_networkprismacloudio_v1_NetworkRuleSetPolicyList(ref common
 		},
 		Dependencies: []string{
 			"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.NetworkRuleSetPolicy", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_pkg_apis_networkprismacloudio_v1_PUTrafficAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "PUTrafficAction is the Schema for the PUTrafficActions API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.aporeto.io/gaia.SparsePUTrafficAction"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.SparsePUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_pkg_apis_networkprismacloudio_v1_PUTrafficActionList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "PUTrafficActionList contains a list of PUTrafficAction",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficAction"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 

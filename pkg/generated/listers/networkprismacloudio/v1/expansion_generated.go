@@ -33,6 +33,10 @@ type ClusterExternalNetworkListerExpansion interface{}
 // ClusterNetworkRuleSetPolicyLister.
 type ClusterNetworkRuleSetPolicyListerExpansion interface{}
 
+// ClusterPUTrafficActionListerExpansion allows custom methods to be added to
+// ClusterPUTrafficActionLister.
+type ClusterPUTrafficActionListerExpansion interface{}
+
 // ClusterProcessingUnitListerExpansion allows custom methods to be added to
 // ClusterProcessingUnitLister.
 type ClusterProcessingUnitListerExpansion interface{}
@@ -52,6 +56,14 @@ type NetworkRuleSetPolicyListerExpansion interface{}
 // NetworkRuleSetPolicyNamespaceListerExpansion allows custom methods to be added to
 // NetworkRuleSetPolicyNamespaceLister.
 type NetworkRuleSetPolicyNamespaceListerExpansion interface{}
+
+// PUTrafficActionListerExpansion allows custom methods to be added to
+// PUTrafficActionLister.
+type PUTrafficActionListerExpansion interface{}
+
+// PUTrafficActionNamespaceListerExpansion allows custom methods to be added to
+// PUTrafficActionNamespaceLister.
+type PUTrafficActionNamespaceListerExpansion interface{}
 
 // ProcessingUnitListerExpansion allows custom methods to be added to
 // ProcessingUnitLister.

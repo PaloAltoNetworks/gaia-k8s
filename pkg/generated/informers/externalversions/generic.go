@@ -60,12 +60,16 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().ClusterExternalNetworks().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("clusternetworkrulesetpolicies"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().ClusterNetworkRuleSetPolicies().Informer()}, nil
+	case v1.SchemeGroupVersion.WithResource("clusterputrafficactions"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().ClusterPUTrafficActions().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("clusterprocessingunits"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().ClusterProcessingUnits().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("externalnetworks"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().ExternalNetworks().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("networkrulesetpolicies"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().NetworkRuleSetPolicies().Informer()}, nil
+	case v1.SchemeGroupVersion.WithResource("putrafficactions"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().PUTrafficActions().Informer()}, nil
 	case v1.SchemeGroupVersion.WithResource("processingunits"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Network().V1().ProcessingUnits().Informer()}, nil
 
