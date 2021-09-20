@@ -29,9 +29,11 @@ type NetworkV1Interface interface {
 	ClusterEnforcerProfilesGetter
 	ClusterExternalNetworksGetter
 	ClusterNetworkRuleSetPoliciesGetter
+	ClusterPUTrafficActionsGetter
 	ClusterProcessingUnitsGetter
 	ExternalNetworksGetter
 	NetworkRuleSetPoliciesGetter
+	PUTrafficActionsGetter
 	ProcessingUnitsGetter
 }
 
@@ -56,6 +58,10 @@ func (c *NetworkV1Client) ClusterNetworkRuleSetPolicies() ClusterNetworkRuleSetP
 	return newClusterNetworkRuleSetPolicies(c)
 }
 
+func (c *NetworkV1Client) ClusterPUTrafficActions() ClusterPUTrafficActionInterface {
+	return newClusterPUTrafficActions(c)
+}
+
 func (c *NetworkV1Client) ClusterProcessingUnits() ClusterProcessingUnitInterface {
 	return newClusterProcessingUnits(c)
 }
@@ -66,6 +72,10 @@ func (c *NetworkV1Client) ExternalNetworks(namespace string) ExternalNetworkInte
 
 func (c *NetworkV1Client) NetworkRuleSetPolicies(namespace string) NetworkRuleSetPolicyInterface {
 	return newNetworkRuleSetPolicies(c, namespace)
+}
+
+func (c *NetworkV1Client) PUTrafficActions(namespace string) PUTrafficActionInterface {
+	return newPUTrafficActions(c, namespace)
 }
 
 func (c *NetworkV1Client) ProcessingUnits(namespace string) ProcessingUnitInterface {

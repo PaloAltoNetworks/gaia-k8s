@@ -37,66 +37,86 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterExternalNetworkList":      schema_pkg_apis_networkprismacloudio_v1_ClusterExternalNetworkList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterNetworkRuleSetPolicy":     schema_pkg_apis_networkprismacloudio_v1_ClusterNetworkRuleSetPolicy(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterNetworkRuleSetPolicyList": schema_pkg_apis_networkprismacloudio_v1_ClusterNetworkRuleSetPolicyList(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficAction":          schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficAction(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficActionList":      schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficActionList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterProcessingUnit":           schema_pkg_apis_networkprismacloudio_v1_ClusterProcessingUnit(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterProcessingUnitList":       schema_pkg_apis_networkprismacloudio_v1_ClusterProcessingUnitList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ExternalNetwork":                 schema_pkg_apis_networkprismacloudio_v1_ExternalNetwork(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ExternalNetworkList":             schema_pkg_apis_networkprismacloudio_v1_ExternalNetworkList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.NetworkRuleSetPolicy":            schema_pkg_apis_networkprismacloudio_v1_NetworkRuleSetPolicy(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.NetworkRuleSetPolicyList":        schema_pkg_apis_networkprismacloudio_v1_NetworkRuleSetPolicyList(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficAction":                 schema_pkg_apis_networkprismacloudio_v1_PUTrafficAction(ref),
+		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficActionList":             schema_pkg_apis_networkprismacloudio_v1_PUTrafficActionList(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ProcessingUnit":                  schema_pkg_apis_networkprismacloudio_v1_ProcessingUnit(ref),
 		"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ProcessingUnitList":              schema_pkg_apis_networkprismacloudio_v1_ProcessingUnitList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                           schema_pkg_apis_meta_v1_APIGroup(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                                       schema_pkg_apis_meta_v1_APIGroupList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                                        schema_pkg_apis_meta_v1_APIResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResourceList":                                    schema_pkg_apis_meta_v1_APIResourceList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIVersions":                                        schema_pkg_apis_meta_v1_APIVersions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ApplyOptions":                                       schema_pkg_apis_meta_v1_ApplyOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Condition":                                          schema_pkg_apis_meta_v1_Condition(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.CreateOptions":                                      schema_pkg_apis_meta_v1_CreateOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions":                                      schema_pkg_apis_meta_v1_DeleteOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Duration":                                           schema_pkg_apis_meta_v1_Duration(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.FieldsV1":                                           schema_pkg_apis_meta_v1_FieldsV1(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions":                                         schema_pkg_apis_meta_v1_GetOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind":                                          schema_pkg_apis_meta_v1_GroupKind(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource":                                      schema_pkg_apis_meta_v1_GroupResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersion":                                       schema_pkg_apis_meta_v1_GroupVersion(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery":                           schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind":                                   schema_pkg_apis_meta_v1_GroupVersionKind(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource":                               schema_pkg_apis_meta_v1_GroupVersionResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent":                                      schema_pkg_apis_meta_v1_InternalEvent(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector":                                      schema_pkg_apis_meta_v1_LabelSelector(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement":                           schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.List":                                               schema_pkg_apis_meta_v1_List(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta":                                           schema_pkg_apis_meta_v1_ListMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ListOptions":                                        schema_pkg_apis_meta_v1_ListOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry":                                 schema_pkg_apis_meta_v1_ManagedFieldsEntry(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.MicroTime":                                          schema_pkg_apis_meta_v1_MicroTime(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta":                                         schema_pkg_apis_meta_v1_ObjectMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference":                                     schema_pkg_apis_meta_v1_OwnerReference(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadata":                              schema_pkg_apis_meta_v1_PartialObjectMetadata(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadataList":                          schema_pkg_apis_meta_v1_PartialObjectMetadataList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Patch":                                              schema_pkg_apis_meta_v1_Patch(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PatchOptions":                                       schema_pkg_apis_meta_v1_PatchOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Preconditions":                                      schema_pkg_apis_meta_v1_Preconditions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.RootPaths":                                          schema_pkg_apis_meta_v1_RootPaths(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ServerAddressByClientCIDR":                          schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Status":                                             schema_pkg_apis_meta_v1_Status(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause":                                        schema_pkg_apis_meta_v1_StatusCause(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails":                                      schema_pkg_apis_meta_v1_StatusDetails(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Table":                                              schema_pkg_apis_meta_v1_Table(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableColumnDefinition":                              schema_pkg_apis_meta_v1_TableColumnDefinition(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableOptions":                                       schema_pkg_apis_meta_v1_TableOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRow":                                           schema_pkg_apis_meta_v1_TableRow(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRowCondition":                                  schema_pkg_apis_meta_v1_TableRowCondition(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Time":                                               schema_pkg_apis_meta_v1_Time(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Timestamp":                                          schema_pkg_apis_meta_v1_Timestamp(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta":                                           schema_pkg_apis_meta_v1_TypeMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions":                                      schema_pkg_apis_meta_v1_UpdateOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent":                                         schema_pkg_apis_meta_v1_WatchEvent(ref),
-		"k8s.io/apimachinery/pkg/runtime.RawExtension":                                            schema_k8sio_apimachinery_pkg_runtime_RawExtension(ref),
-		"k8s.io/apimachinery/pkg/runtime.TypeMeta":                                                schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref),
-		"k8s.io/apimachinery/pkg/runtime.Unknown":                                                 schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
-		"k8s.io/apimachinery/pkg/version.Info":                                                    schema_k8sio_apimachinery_pkg_version_Info(ref),
+		"go.aporeto.io/gaia.Enforcer":                                    schema_goaporetoio_gaia_Enforcer(ref),
+		"go.aporeto.io/gaia.EnforcerProfile":                             schema_goaporetoio_gaia_EnforcerProfile(ref),
+		"go.aporeto.io/gaia.ExternalNetwork":                             schema_goaporetoio_gaia_ExternalNetwork(ref),
+		"go.aporeto.io/gaia.NetworkRule":                                 schema_goaporetoio_gaia_NetworkRule(ref),
+		"go.aporeto.io/gaia.NetworkRuleNet":                              schema_goaporetoio_gaia_NetworkRuleNet(ref),
+		"go.aporeto.io/gaia.NetworkRuleSetPolicy":                        schema_goaporetoio_gaia_NetworkRuleSetPolicy(ref),
+		"go.aporeto.io/gaia.PUTrafficAction":                             schema_goaporetoio_gaia_PUTrafficAction(ref),
+		"go.aporeto.io/gaia.ProcessingUnit":                              schema_goaporetoio_gaia_ProcessingUnit(ref),
+		"go.aporeto.io/gaia.ProcessingUnitService":                       schema_goaporetoio_gaia_ProcessingUnitService(ref),
+		"go.aporeto.io/gaia.SparseEnforcer":                              schema_goaporetoio_gaia_SparseEnforcer(ref),
+		"go.aporeto.io/gaia.SparseEnforcerProfile":                       schema_goaporetoio_gaia_SparseEnforcerProfile(ref),
+		"go.aporeto.io/gaia.SparseExternalNetwork":                       schema_goaporetoio_gaia_SparseExternalNetwork(ref),
+		"go.aporeto.io/gaia.SparseNetworkRuleSetPolicy":                  schema_goaporetoio_gaia_SparseNetworkRuleSetPolicy(ref),
+		"go.aporeto.io/gaia.SparsePUTrafficAction":                       schema_goaporetoio_gaia_SparsePUTrafficAction(ref),
+		"go.aporeto.io/gaia.SparseProcessingUnit":                        schema_goaporetoio_gaia_SparseProcessingUnit(ref),
+		"go.aporeto.io/gaia.TraceMode":                                   schema_goaporetoio_gaia_TraceMode(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                  schema_pkg_apis_meta_v1_APIGroup(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":              schema_pkg_apis_meta_v1_APIGroupList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":               schema_pkg_apis_meta_v1_APIResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResourceList":           schema_pkg_apis_meta_v1_APIResourceList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIVersions":               schema_pkg_apis_meta_v1_APIVersions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ApplyOptions":              schema_pkg_apis_meta_v1_ApplyOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Condition":                 schema_pkg_apis_meta_v1_Condition(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.CreateOptions":             schema_pkg_apis_meta_v1_CreateOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions":             schema_pkg_apis_meta_v1_DeleteOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Duration":                  schema_pkg_apis_meta_v1_Duration(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.FieldsV1":                  schema_pkg_apis_meta_v1_FieldsV1(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions":                schema_pkg_apis_meta_v1_GetOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind":                 schema_pkg_apis_meta_v1_GroupKind(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource":             schema_pkg_apis_meta_v1_GroupResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersion":              schema_pkg_apis_meta_v1_GroupVersion(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery":  schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind":          schema_pkg_apis_meta_v1_GroupVersionKind(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource":      schema_pkg_apis_meta_v1_GroupVersionResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent":             schema_pkg_apis_meta_v1_InternalEvent(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector":             schema_pkg_apis_meta_v1_LabelSelector(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement":  schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.List":                      schema_pkg_apis_meta_v1_List(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta":                  schema_pkg_apis_meta_v1_ListMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ListOptions":               schema_pkg_apis_meta_v1_ListOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry":        schema_pkg_apis_meta_v1_ManagedFieldsEntry(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.MicroTime":                 schema_pkg_apis_meta_v1_MicroTime(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta":                schema_pkg_apis_meta_v1_ObjectMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference":            schema_pkg_apis_meta_v1_OwnerReference(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadata":     schema_pkg_apis_meta_v1_PartialObjectMetadata(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadataList": schema_pkg_apis_meta_v1_PartialObjectMetadataList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Patch":                     schema_pkg_apis_meta_v1_Patch(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PatchOptions":              schema_pkg_apis_meta_v1_PatchOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Preconditions":             schema_pkg_apis_meta_v1_Preconditions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.RootPaths":                 schema_pkg_apis_meta_v1_RootPaths(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ServerAddressByClientCIDR": schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Status":                    schema_pkg_apis_meta_v1_Status(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause":               schema_pkg_apis_meta_v1_StatusCause(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails":             schema_pkg_apis_meta_v1_StatusDetails(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Table":                     schema_pkg_apis_meta_v1_Table(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableColumnDefinition":     schema_pkg_apis_meta_v1_TableColumnDefinition(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableOptions":              schema_pkg_apis_meta_v1_TableOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRow":                  schema_pkg_apis_meta_v1_TableRow(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRowCondition":         schema_pkg_apis_meta_v1_TableRowCondition(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Time":                      schema_pkg_apis_meta_v1_Time(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Timestamp":                 schema_pkg_apis_meta_v1_Timestamp(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta":                  schema_pkg_apis_meta_v1_TypeMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions":             schema_pkg_apis_meta_v1_UpdateOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent":                schema_pkg_apis_meta_v1_WatchEvent(ref),
+		"k8s.io/apimachinery/pkg/runtime.RawExtension":                   schema_k8sio_apimachinery_pkg_runtime_RawExtension(ref),
+		"k8s.io/apimachinery/pkg/runtime.TypeMeta":                       schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref),
+		"k8s.io/apimachinery/pkg/runtime.Unknown":                        schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
+		"k8s.io/apimachinery/pkg/version.Info":                           schema_k8sio_apimachinery_pkg_version_Info(ref),
 	}
 }
 
@@ -460,6 +480,96 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterNetworkRuleSetPolicyList(ref
 	}
 }
 
+func schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "ClusterPUTrafficAction is the Schema for the PUTrafficActions API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.aporeto.io/gaia.SparsePUTrafficAction"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.SparsePUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficActionList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "ClusterPUTrafficActionList contains a list of PUTrafficAction",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficAction"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ClusterPUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
 func schema_pkg_apis_networkprismacloudio_v1_ClusterProcessingUnit(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -730,6 +840,96 @@ func schema_pkg_apis_networkprismacloudio_v1_NetworkRuleSetPolicyList(ref common
 	}
 }
 
+func schema_pkg_apis_networkprismacloudio_v1_PUTrafficAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "PUTrafficAction is the Schema for the PUTrafficActions API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.aporeto.io/gaia.SparsePUTrafficAction"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.SparsePUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_pkg_apis_networkprismacloudio_v1_PUTrafficActionList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "PUTrafficActionList contains a list of PUTrafficAction",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficAction"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.PUTrafficAction", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
 func schema_pkg_apis_networkprismacloudio_v1_ProcessingUnit(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -817,6 +1017,2842 @@ func schema_pkg_apis_networkprismacloudio_v1_ProcessingUnitList(ref common.Refer
 		},
 		Dependencies: []string{
 			"go.aporeto.io/gaia-k8s/pkg/apis/networkprismacloudio/v1.ProcessingUnit", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_goaporetoio_gaia_Enforcer(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "Enforcer represents the model of a enforcer",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"FQDN": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the fully qualified domain name (FQDN) of the server where the enforcer is running.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"certificate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The certificate of the enforcer.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"certificateRequest": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If not empty during a create or update operation, the provided certificate signing request (CSR) will be validated and signed by the Microsegmentation Console, providing a renewed certificate.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"collectInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Indicates to the enforcer whether or not it needs to collect information.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"collectedInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Represents the latest information collected by the enforcer.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"controller": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Microsegmentation Console identifier managing this object. This property is mostly useful when federating multiple Microsegmentation Consoles.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"currentVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The version number of the installed enforcer binary.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"detectedHostModeContainers": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field indicates whether the enforcer has detected host mode containers.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"enforcementStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Status of the enforcement for host services.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"lastCollectionID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifies the last collection.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"lastCollectionTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifies when the information was collected.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastMigrationTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last migration date of the enforcer.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastSyncTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The time and date of the last heartbeat.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"localCA": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the initial chain of trust for the enforcer. This value is only given when you retrieve a single enforcer.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"logLevel": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Log level of the enforcer.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"logLevelDuration": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Determines the duration of which the log level will be active, using [Golang duration syntax](https://golang.org/pkg/time/#example_Duration).",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"machineID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A unique identifier for every machine as detected by the enforcer. It is based on hardware information such as the SMBIOS UUID, MAC addresses of interfaces, or cloud provider IDs.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"migrationStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines the migration status.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"nextAvailableVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines the next version the enforcer will be migrated to.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"operationalStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The status of the enforcer.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"publicToken": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The public token of the server that will be included in the datapath and is signed by the private certificate authority.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"startTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The time and date on which this enforcer was started. The enforcer reports this and the value is preserved across disconnects.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"subnets": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Local subnets of this enforcer.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"unreachable": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Microsegmentation Console sets this value to `true` if it hasn't heard from the enforcer in the last five minutes.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+				Required: []string{"FQDN", "ID", "annotations", "associatedTags", "certificate", "certificateRequest", "collectInfo", "collectedInfo", "controller", "createTime", "currentVersion", "description", "detectedHostModeContainers", "enforcementStatus", "lastCollectionID", "lastCollectionTime", "lastMigrationTime", "lastSyncTime", "localCA", "logLevel", "logLevelDuration", "machineID", "metadata", "migrationStatus", "name", "namespace", "nextAvailableVersion", "normalizedTags", "operationalStatus", "protected", "publicToken", "startTime", "subnets", "unreachable", "updateTime"},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_EnforcerProfile(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "EnforcerProfile represents the model of a enforcerprofile",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"excludedInterfaces": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Ignore traffic with a source or destination matching the specified interfaces.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"excludedNetworks": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Ignore any networks specified here and do not even report any flows. This can be useful for excluding localhost loopback traffic, ignoring traffic to the Kubernetes API, and using Microsegmentation for SSH only.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"ignoreExpression": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A tag expression that identifies processing units to ignore. This can be useful to exclude `kube-system` pods, AWS EC2 agent pods, and third-party agents.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"kubernetesMetadataExtractor": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is kept for backward compatibility for enforcers <= 3.5.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"kubernetesSupportEnabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is kept for backward compatibility for enforcers <= 3.5.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"metadataExtractor": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is kept for backward compatibility for enforcers <= 3.5.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"propagate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Propagates the policy to all of its children.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"targetNetworks": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If empty, the enforcer auto-discovers the TCP networks. Auto-discovery works best in Kubernetes and OpenShift deployments. You may need to manually specify the TCP networks if middle boxes exist that do not comply with [TCP Fast Open RFC 7413](https://tools.ietf.org/html/rfc7413).",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"targetUDPNetworks": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If empty, the enforcer enforces all UDP networks. This works best when all UDP networks have enforcers. If some UDP networks do not have enforcers, you may need to manually specify the UDP networks that should be enforced.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"trustedCAs": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of trusted certificate authorities. If empty, the main chain of trust will be used.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+				Required: []string{"ID", "annotations", "associatedTags", "createTime", "description", "excludedInterfaces", "excludedNetworks", "ignoreExpression", "kubernetesMetadataExtractor", "kubernetesSupportEnabled", "metadata", "metadataExtractor", "name", "namespace", "normalizedTags", "propagate", "protected", "targetNetworks", "targetUDPNetworks", "trustedCAs", "updateTime"},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_ExternalNetwork(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "ExternalNetwork represents the model of a externalnetwork",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"entries": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of CIDRs or domain name.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"propagate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Propagates the policy to all of its children.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"servicePorts": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of protocol/ports `(tcp/80)` or `(udp/80:100)`.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"type": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The type of external network (default `Subnet`).",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+				Required: []string{"ID", "annotations", "associatedTags", "createTime", "description", "entries", "metadata", "name", "namespace", "normalizedTags", "propagate", "protected", "servicePorts", "type", "updateTime"},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_NetworkRule(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "NetworkRule represents the model of a networkrule",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"action": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines the action to apply to a flow. - `Allow`: allows the defined traffic. - `Reject`: rejects the defined traffic; useful in conjunction with an allow all policy.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"logsDisabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If `true`, the relevant flows will not be reported to the Microsegmentation Console. Under some advanced scenarios you may wish to set this to `true`, such as to save space or improve performance.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A user defined name to keep track of the rule in the reporting.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"networks": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A list of IP CIDRS or FQDNS that identify remote endpoints.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("go.aporeto.io/gaia.NetworkRuleNet"),
+									},
+								},
+							},
+						},
+					},
+					"object": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifies the set of remote workloads that the rule relates to. The selector will identify both processing units as well as external networks that match the selector.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"observationEnabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If set to `true`, the flow will be in observation mode.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"protocolPorts": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Represents the ports and protocols this policy applies to. Protocol/ports are defined as tcp/80, udp/22. For protocols that do not have ports, the port designation is not allowed.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"action", "logsDisabled", "object", "observationEnabled", "protocolPorts"},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.NetworkRuleNet"},
+	}
+}
+
+func schema_goaporetoio_gaia_NetworkRuleNet(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "NetworkRuleNet represents the model of a networkrulenet",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The ID of the external network.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"entries": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of CIDRs or domain name.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The namespace of the external network.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+				},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_NetworkRuleSetPolicy(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "NetworkRuleSetPolicy represents the model of a networkrulesetpolicy",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"disabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the property is disabled.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"fallback": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Indicates that this is fallback policy. It will only be applied if no other policies have been resolved. If the policy is also propagated it will become a fallback for children namespaces.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"incomingRules": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The set of rules to apply to incoming traffic (traffic coming to the Processing Unit matching the subject).",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("go.aporeto.io/gaia.NetworkRule"),
+									},
+								},
+							},
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"outgoingRules": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The set of rules to apply to outgoing traffic (traffic coming from the Processing Unit matching the subject).",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("go.aporeto.io/gaia.NetworkRule"),
+									},
+								},
+							},
+						},
+					},
+					"propagate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Propagates the policy to all of its children.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"subject": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A tag expression identifying used to match processing units to which this policy applies to.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+				Required: []string{"ID", "annotations", "associatedTags", "createTime", "description", "disabled", "fallback", "incomingRules", "metadata", "name", "namespace", "normalizedTags", "outgoingRules", "propagate", "protected", "subject", "updateTime"},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.NetworkRule"},
+	}
+}
+
+func schema_goaporetoio_gaia_PUTrafficAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "PUTrafficAction represents the model of a putrafficaction",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"Incoming": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The processing unit action for incoming traffic for the namespace.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"Outgoing": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The processing unit action for outgoing traffic for the namespace.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+				},
+				Required: []string{"Incoming", "Outgoing"},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_ProcessingUnit(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "ProcessingUnit represents the model of a processingunit",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"clientLocalID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The local PUID set by enforcer. Enforcer may create a local PU if it cannot communicate with the Microsegmentation Console. When eventually the Microsegmentation Console is able to create the PU, the `clientLocalID` will be used to convert a CachedFlowReport containing a local PUID to a real FlowReport.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"collectInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A value of `true` indicates to the enforcer that it needs to collect information for this processing unit.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"collectedInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Represents the latest information collected by the enforcer for this processing unit.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"controller": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Microsegmentation Console identifier managing this object. This property is mostly useful when federating multiple Microsegmentation Consoles.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"datapathType": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The datapath type that processing units are implementing: - `Aporeto`: The enforcer is managing and handling the datapath. - `EnvoyAuthorizer`: The enforcer is serving Envoy-compatible gRPC APIs that for example can be used by an Envoy proxy to use the Microsegmentation PKI and implement Microsegmentation network policies. NOTE: The enforcer is not owning the datapath in this case. It is merely providing an authorizer API.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"enforcementStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the state of the enforcer for the processing unit. `Inactive` (default): the enforcer is not enforcing any host service. `Active`: the enforcer is enforcing a host service. `Failed`: an error occurred during the enforcement attempt.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"enforcerID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The ID of the enforcer associated with the processing unit.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"enforcerNamespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The namespace of the enforcer associated with the processing unit.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"image": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is deprecated and it is there for backward compatibility. Use `images` instead.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"images": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of images or executable paths used by the processing unit.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"lastCollectionTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The date and time when the information was collected.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastLocalTimestamp": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Time and date of the processing unit set by the enforcer.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastSyncTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The date and time of the last policy resolution.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"nativeContextID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Docker UUID or service PID.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"networkServices": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The list of services that this processing unit has declared that it will be listening to, either in its activation command or by exposing the ports in a container manifest.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("go.aporeto.io/gaia.ProcessingUnitService"),
+									},
+								},
+							},
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"operationalStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Operational status of the processing unit: `Initialized` (default), `Paused`, `Running`, `Stopped`, or `Terminated`.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"tracing": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Indicates if this processing unit must be placed in tracing mode.",
+							Ref:         ref("go.aporeto.io/gaia.TraceMode"),
+						},
+					},
+					"type": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Type of processing unit: `APIGateway`, `Docker`, `Host`, `HostService`, `LinuxService`, `WindowsService`, `RKT`, `User`, or `SSHSession`.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Default:     map[string]interface{}{},
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"vulnerabilityLevel": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of vulnerabilities affecting this processing unit.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+				},
+				Required: []string{"ID", "annotations", "associatedTags", "collectInfo", "collectedInfo", "controller", "createTime", "datapathType", "description", "enforcementStatus", "enforcerID", "enforcerNamespace", "image", "images", "lastCollectionTime", "lastLocalTimestamp", "lastSyncTime", "metadata", "name", "namespace", "nativeContextID", "networkServices", "normalizedTags", "operationalStatus", "protected", "tracing", "type", "updateTime", "vulnerabilityLevel"},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.ProcessingUnitService", "go.aporeto.io/gaia.TraceMode"},
+	}
+}
+
+func schema_goaporetoio_gaia_ProcessingUnitService(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "ProcessingUnitService represents the model of a processingunitservice",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ports": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of allowed ports and ranges.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"protocol": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Protocol used by the service.",
+							Default:     0,
+							Type:        []string{"integer"},
+							Format:      "int32",
+						},
+					},
+					"targetPorts": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of single ports or range (xx:yy).",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"ports", "protocol", "targetPorts"},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_SparseEnforcer(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "SparseEnforcer represents the sparse version of a enforcer.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"FQDN": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the fully qualified domain name (FQDN) of the server where the enforcer is running.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"certificate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The certificate of the enforcer.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"certificateRequest": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If not empty during a create or update operation, the provided certificate signing request (CSR) will be validated and signed by the Microsegmentation Console, providing a renewed certificate.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"collectInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Indicates to the enforcer whether or not it needs to collect information.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"collectedInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Represents the latest information collected by the enforcer.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"controller": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Microsegmentation Console identifier managing this object. This property is mostly useful when federating multiple Microsegmentation Consoles.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"currentVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The version number of the installed enforcer binary.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"detectedHostModeContainers": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field indicates whether the enforcer has detected host mode containers.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"enforcementStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Status of the enforcement for host services.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"lastCollectionID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifies the last collection.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"lastCollectionTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifies when the information was collected.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastMigrationTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last migration date of the enforcer.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastSyncTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The time and date of the last heartbeat.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"localCA": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the initial chain of trust for the enforcer. This value is only given when you retrieve a single enforcer.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"logLevel": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Log level of the enforcer.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"logLevelDuration": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Determines the duration of which the log level will be active, using [Golang duration syntax](https://golang.org/pkg/time/#example_Duration).",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"machineID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A unique identifier for every machine as detected by the enforcer. It is based on hardware information such as the SMBIOS UUID, MAC addresses of interfaces, or cloud provider IDs.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"migrationStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines the migration status.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"nextAvailableVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines the next version the enforcer will be migrated to.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"operationalStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The status of the enforcer.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"publicToken": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The public token of the server that will be included in the datapath and is signed by the private certificate authority.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"startTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The time and date on which this enforcer was started. The enforcer reports this and the value is preserved across disconnects.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"subnets": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Local subnets of this enforcer.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"unreachable": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Microsegmentation Console sets this value to `true` if it hasn't heard from the enforcer in the last five minutes.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_SparseEnforcerProfile(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "SparseEnforcerProfile represents the sparse version of a enforcerprofile.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"excludedInterfaces": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Ignore traffic with a source or destination matching the specified interfaces.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"excludedNetworks": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Ignore any networks specified here and do not even report any flows. This can be useful for excluding localhost loopback traffic, ignoring traffic to the Kubernetes API, and using Microsegmentation for SSH only.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"ignoreExpression": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A tag expression that identifies processing units to ignore. This can be useful to exclude `kube-system` pods, AWS EC2 agent pods, and third-party agents.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"kubernetesMetadataExtractor": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is kept for backward compatibility for enforcers <= 3.5.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"kubernetesSupportEnabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is kept for backward compatibility for enforcers <= 3.5.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"metadataExtractor": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is kept for backward compatibility for enforcers <= 3.5.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"propagate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Propagates the policy to all of its children.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"targetNetworks": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If empty, the enforcer auto-discovers the TCP networks. Auto-discovery works best in Kubernetes and OpenShift deployments. You may need to manually specify the TCP networks if middle boxes exist that do not comply with [TCP Fast Open RFC 7413](https://tools.ietf.org/html/rfc7413).",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"targetUDPNetworks": {
+						SchemaProps: spec.SchemaProps{
+							Description: "If empty, the enforcer enforces all UDP networks. This works best when all UDP networks have enforcers. If some UDP networks do not have enforcers, you may need to manually specify the UDP networks that should be enforced.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"trustedCAs": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of trusted certificate authorities. If empty, the main chain of trust will be used.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_SparseExternalNetwork(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "SparseExternalNetwork represents the sparse version of a externalnetwork.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"entries": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of CIDRs or domain name.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"propagate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Propagates the policy to all of its children.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"servicePorts": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of protocol/ports `(tcp/80)` or `(udp/80:100)`.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"type": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The type of external network (default `Subnet`).",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_SparseNetworkRuleSetPolicy(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "SparseNetworkRuleSetPolicy represents the sparse version of a networkrulesetpolicy.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"disabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the property is disabled.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"fallback": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Indicates that this is fallback policy. It will only be applied if no other policies have been resolved. If the policy is also propagated it will become a fallback for children namespaces.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"incomingRules": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The set of rules to apply to incoming traffic (traffic coming to the Processing Unit matching the subject).",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("go.aporeto.io/gaia.NetworkRule"),
+									},
+								},
+							},
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"outgoingRules": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The set of rules to apply to outgoing traffic (traffic coming from the Processing Unit matching the subject).",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("go.aporeto.io/gaia.NetworkRule"),
+									},
+								},
+							},
+						},
+					},
+					"propagate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Propagates the policy to all of its children.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"subject": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A tag expression identifying used to match processing units to which this policy applies to.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.NetworkRule"},
+	}
+}
+
+func schema_goaporetoio_gaia_SparsePUTrafficAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "SparsePUTrafficAction represents the sparse version of a putrafficaction.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"Incoming": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The processing unit action for incoming traffic for the namespace.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"Outgoing": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The processing unit action for outgoing traffic for the namespace.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+				},
+			},
+		},
+	}
+}
+
+func schema_goaporetoio_gaia_SparseProcessingUnit(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "SparseProcessingUnit represents the sparse version of a processingunit.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"ID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Identifier of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"annotations": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Stores additional information about an entity.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type: []string{"array"},
+										Items: &spec.SchemaOrArray{
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Default: "",
+													Type:    []string{"string"},
+													Format:  "",
+												},
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+					"associatedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of tags attached to an entity.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"clientLocalID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The local PUID set by enforcer. Enforcer may create a local PU if it cannot communicate with the Microsegmentation Console. When eventually the Microsegmentation Console is able to create the PU, the `clientLocalID` will be used to convert a CachedFlowReport containing a local PUID to a real FlowReport.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"collectInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "A value of `true` indicates to the enforcer that it needs to collect information for this processing unit.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"collectedInfo": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Represents the latest information collected by the enforcer for this processing unit.",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"controller": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Microsegmentation Console identifier managing this object. This property is mostly useful when federating multiple Microsegmentation Consoles.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"createTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Creation date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"datapathType": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The datapath type that processing units are implementing: - `Aporeto`: The enforcer is managing and handling the datapath. - `EnvoyAuthorizer`: The enforcer is serving Envoy-compatible gRPC APIs that for example can be used by an Envoy proxy to use the Microsegmentation PKI and implement Microsegmentation network policies. NOTE: The enforcer is not owning the datapath in this case. It is merely providing an authorizer API.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"description": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Description of the object.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"enforcementStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the state of the enforcer for the processing unit. `Inactive` (default): the enforcer is not enforcing any host service. `Active`: the enforcer is enforcing a host service. `Failed`: an error occurred during the enforcement attempt.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"enforcerID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The ID of the enforcer associated with the processing unit.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"enforcerNamespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The namespace of the enforcer associated with the processing unit.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"image": {
+						SchemaProps: spec.SchemaProps{
+							Description: "This field is deprecated and it is there for backward compatibility. Use `images` instead.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"images": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of images or executable paths used by the processing unit.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"lastCollectionTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The date and time when the information was collected.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastLocalTimestamp": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Time and date of the processing unit set by the enforcer.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"lastSyncTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The date and time of the last policy resolution.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains tags that can only be set during creation, must all start with the '@' prefix, and should only be used by external systems.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"namespace": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Namespace tag attached to an entity.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"nativeContextID": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The Docker UUID or service PID.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"networkServices": {
+						SchemaProps: spec.SchemaProps{
+							Description: "The list of services that this processing unit has declared that it will be listening to, either in its activation command or by exposing the ports in a container manifest.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("go.aporeto.io/gaia.ProcessingUnitService"),
+									},
+								},
+							},
+						},
+					},
+					"normalizedTags": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of normalized tags of the entities.",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: "",
+										Type:    []string{"string"},
+										Format:  "",
+									},
+								},
+							},
+						},
+					},
+					"operationalStatus": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Operational status of the processing unit: `Initialized` (default), `Paused`, `Running`, `Stopped`, or `Terminated`.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"protected": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Defines if the object is protected.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"tracing": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Indicates if this processing unit must be placed in tracing mode.",
+							Ref:         ref("go.aporeto.io/gaia.TraceMode"),
+						},
+					},
+					"type": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Type of processing unit: `APIGateway`, `Docker`, `Host`, `HostService`, `LinuxService`, `WindowsService`, `RKT`, `User`, or `SSHSession`.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"updateTime": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Last update date of the object.",
+							Type:        []string{"string"},
+							Format:      "date-time",
+						},
+					},
+					"vulnerabilityLevel": {
+						SchemaProps: spec.SchemaProps{
+							Description: "List of vulnerabilities affecting this processing unit.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.aporeto.io/gaia.ProcessingUnitService", "go.aporeto.io/gaia.TraceMode"},
+	}
+}
+
+func schema_goaporetoio_gaia_TraceMode(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "TraceMode represents the model of a tracemode",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"IPTables": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Instructs the enforcers to provide an iptables trace for a processing unit.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"applicationConnections": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Instructs the enforcer to send records for all application-initiated connections.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"interval": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Determines the length of the time interval that the trace must be enabled, using [Golang duration syntax](https://golang.org/pkg/time/#example_Duration).",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"networkConnections": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Instructs the enforcer to send records for all network-initiated connections.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+				},
+				Required: []string{"IPTables", "applicationConnections", "interval", "networkConnections"},
+			},
+		},
 	}
 }
 

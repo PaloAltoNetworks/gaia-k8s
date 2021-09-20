@@ -25,10 +25,14 @@ type ClusterExternalNetworkExpansion interface{}
 
 type ClusterNetworkRuleSetPolicyExpansion interface{}
 
+type ClusterPUTrafficActionExpansion interface{}
+
 type ClusterProcessingUnitExpansion interface{}
 
 type ExternalNetworkExpansion interface{}
 
 type NetworkRuleSetPolicyExpansion interface{}
+
+type PUTrafficActionExpansion interface{}
 
 type ProcessingUnitExpansion interface{}

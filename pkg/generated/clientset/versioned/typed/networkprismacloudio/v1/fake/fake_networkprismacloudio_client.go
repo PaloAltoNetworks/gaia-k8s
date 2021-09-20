@@ -43,6 +43,10 @@ func (c *FakeNetworkV1) ClusterNetworkRuleSetPolicies() v1.ClusterNetworkRuleSet
 	return &FakeClusterNetworkRuleSetPolicies{c}
 }
 
+func (c *FakeNetworkV1) ClusterPUTrafficActions() v1.ClusterPUTrafficActionInterface {
+	return &FakeClusterPUTrafficActions{c}
+}
+
 func (c *FakeNetworkV1) ClusterProcessingUnits() v1.ClusterProcessingUnitInterface {
 	return &FakeClusterProcessingUnits{c}
 }
@@ -53,6 +57,10 @@ func (c *FakeNetworkV1) ExternalNetworks(namespace string) v1.ExternalNetworkInt
 
 func (c *FakeNetworkV1) NetworkRuleSetPolicies(namespace string) v1.NetworkRuleSetPolicyInterface {
 	return &FakeNetworkRuleSetPolicies{c, namespace}
+}
+
+func (c *FakeNetworkV1) PUTrafficActions(namespace string) v1.PUTrafficActionInterface {
+	return &FakePUTrafficActions{c, namespace}
 }
 
 func (c *FakeNetworkV1) ProcessingUnits(namespace string) v1.ProcessingUnitInterface {

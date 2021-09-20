@@ -31,12 +31,16 @@ type Interface interface {
 	ClusterExternalNetworks() ClusterExternalNetworkInformer
 	// ClusterNetworkRuleSetPolicies returns a ClusterNetworkRuleSetPolicyInformer.
 	ClusterNetworkRuleSetPolicies() ClusterNetworkRuleSetPolicyInformer
+	// ClusterPUTrafficActions returns a ClusterPUTrafficActionInformer.
+	ClusterPUTrafficActions() ClusterPUTrafficActionInformer
 	// ClusterProcessingUnits returns a ClusterProcessingUnitInformer.
 	ClusterProcessingUnits() ClusterProcessingUnitInformer
 	// ExternalNetworks returns a ExternalNetworkInformer.
 	ExternalNetworks() ExternalNetworkInformer
 	// NetworkRuleSetPolicies returns a NetworkRuleSetPolicyInformer.
 	NetworkRuleSetPolicies() NetworkRuleSetPolicyInformer
+	// PUTrafficActions returns a PUTrafficActionInformer.
+	PUTrafficActions() PUTrafficActionInformer
 	// ProcessingUnits returns a ProcessingUnitInformer.
 	ProcessingUnits() ProcessingUnitInformer
 }
@@ -72,6 +76,11 @@ func (v *version) ClusterNetworkRuleSetPolicies() ClusterNetworkRuleSetPolicyInf
 	return &clusterNetworkRuleSetPolicyInformer{factory: v.factory, tweakListOptions: v.tweakListOptions}
 }
 
+// ClusterPUTrafficActions returns a ClusterPUTrafficActionInformer.
+func (v *version) ClusterPUTrafficActions() ClusterPUTrafficActionInformer {
+	return &clusterPUTrafficActionInformer{factory: v.factory, tweakListOptions: v.tweakListOptions}
+}
+
 // ClusterProcessingUnits returns a ClusterProcessingUnitInformer.
 func (v *version) ClusterProcessingUnits() ClusterProcessingUnitInformer {
 	return &clusterProcessingUnitInformer{factory: v.factory, tweakListOptions: v.tweakListOptions}
@@ -85,6 +94,11 @@ func (v *version) ExternalNetworks() ExternalNetworkInformer {
 // NetworkRuleSetPolicies returns a NetworkRuleSetPolicyInformer.
 func (v *version) NetworkRuleSetPolicies() NetworkRuleSetPolicyInformer {
 	return &networkRuleSetPolicyInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// PUTrafficActions returns a PUTrafficActionInformer.
+func (v *version) PUTrafficActions() PUTrafficActionInformer {
+	return &pUTrafficActionInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // ProcessingUnits returns a ProcessingUnitInformer.
