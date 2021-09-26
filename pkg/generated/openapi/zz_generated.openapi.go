@@ -124,7 +124,7 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterEnforcer(ref common.Referenc
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "ClusterEnforcer is the Schema for the Enforcers API",
+				Description: "ClusterEnforcer is the Schema for the ClusterEnforcers API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -214,7 +214,7 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterEnforcerProfile(ref common.R
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "ClusterEnforcerProfile is the Schema for the EnforcerProfiles API",
+				Description: "ClusterEnforcerProfile is the Schema for the ClusterEnforcerProfiles API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -304,7 +304,7 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterExternalNetwork(ref common.R
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "ClusterExternalNetwork is the Schema for the ExternalNetworks API",
+				Description: "ClusterExternalNetwork is the Schema for the ClusterExternalNetworks API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -394,7 +394,7 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterNetworkRuleSetPolicy(ref com
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "ClusterNetworkRuleSetPolicy is the Schema for the NetworkRuleSetPolicys API",
+				Description: "ClusterNetworkRuleSetPolicy is the Schema for the ClusterNetworkRuleSetPolicys API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -484,7 +484,7 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterPUTrafficAction(ref common.R
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "ClusterPUTrafficAction is the Schema for the PUTrafficActions API",
+				Description: "ClusterPUTrafficAction is the Schema for the ClusterPUTrafficActions API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -574,7 +574,7 @@ func schema_pkg_apis_networkprismacloudio_v1_ClusterProcessingUnit(ref common.Re
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "ClusterProcessingUnit is the Schema for the ProcessingUnits API",
+				Description: "ClusterProcessingUnit is the Schema for the ClusterProcessingUnits API",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
