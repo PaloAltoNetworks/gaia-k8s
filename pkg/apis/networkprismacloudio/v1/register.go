@@ -26,7 +26,6 @@ func Resource(resource string) schema.GroupResource {
 }
 
 // Adds the list of known types to the given scheme.
-// TODO: we need to add all the API types in the schema over here.
 func addKnownTypes(scheme *runtime.Scheme) error {
 	scheme.AddKnownTypes(SchemeGroupVersion,
 		&ClusterNetworkRuleSetPolicy{},

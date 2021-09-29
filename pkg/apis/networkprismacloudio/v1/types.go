@@ -5,7 +5,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// ClusterNetworkRuleSetPolicy is the Schema for the NetworkRuleSetPolicys API
+// ClusterNetworkRuleSetPolicy is the Schema for the ClusterNetworkRuleSetPolicys API
 // +genclient
 // +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -23,7 +23,7 @@ type ClusterNetworkRuleSetPolicyList struct {
 	Items           []ClusterNetworkRuleSetPolicy `json:"items"`
 }
 
-// ClusterExternalNetwork is the Schema for the ExternalNetworks API
+// ClusterExternalNetwork is the Schema for the ClusterExternalNetworks API
 // +genclient
 // +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -110,7 +110,7 @@ type PUTrafficActionList struct {
 	Items           []PUTrafficAction `json:"items"`
 }
 
-// ClusterProcessingUnit is the Schema for the ProcessingUnits API
+// ClusterProcessingUnit is the Schema for the ClusterProcessingUnits API
 // +genclient
 // +genclient:readonly
 // +genclient:nonNamespaced
@@ -129,7 +129,7 @@ type ClusterProcessingUnitList struct {
 	Items           []ClusterProcessingUnit `json:"items"`
 }
 
-// ClusterPUTrafficAction is the Schema for the PUTrafficActions API
+// ClusterPUTrafficAction is the Schema for the ClusterPUTrafficActions API
 // +genclient
 // +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -147,7 +147,7 @@ type ClusterPUTrafficActionList struct {
 	Items           []ClusterPUTrafficAction `json:"items"`
 }
 
-// ClusterEnforcer is the Schema for the Enforcers API
+// ClusterEnforcer is the Schema for the ClusterEnforcers API
 // +genclient
 // +genclient:readonly
 // +genclient:nonNamespaced
@@ -166,7 +166,7 @@ type ClusterEnforcerList struct {
 	Items           []ClusterEnforcer `json:"items"`
 }
 
-// ClusterEnforcerProfile is the Schema for the EnforcerProfiles API
+// ClusterEnforcerProfile is the Schema for the ClusterEnforcerProfiles API
 // +genclient
 // +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
