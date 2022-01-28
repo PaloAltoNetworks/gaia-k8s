@@ -70,8 +70,8 @@ codegen: get-codegen
 regenerate: 
 	rm -rf ./pkg/apis/networkprismacloudio/
 	rm -rf ./pkg/generated/
-	make codegen
 	mkdir ./pkg/generated/
+	make codegen
 	make generate
 
 get-codegen: ## Download get-codegen.

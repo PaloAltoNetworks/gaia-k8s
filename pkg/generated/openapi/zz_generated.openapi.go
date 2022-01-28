@@ -22,9 +22,9 @@ limitations under the License.
 package openapi
 
 import (
+	spec "github.com/go-openapi/spec"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	common "k8s.io/kube-openapi/pkg/common"
-	spec "k8s.io/kube-openapi/pkg/validation/spec"
 )
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
@@ -1572,6 +1572,54 @@ func schema_goaporetoio_gaia_EnforcerProfile(ref common.ReferenceCallback) commo
 							Format:      "",
 						},
 					},
+					"syslogEnabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Enables syslog functionality of enforcers using this enforcerprofile.",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"syslogEndpoint": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the remote endpoint to dispatch the syslog messages.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"syslogEndpointTLSClientCertificate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "PEM-encoded certificate to expose to the clients for TLS.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"syslogEndpointTLSServerCA": {
+						SchemaProps: spec.SchemaProps{
+							Description: "PEM-encoded server CA certificate.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"syslogFacility": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of supported syslog facilities.",
+							Default:     0,
+							Type:        []string{"integer"},
+							Format:      "int32",
+						},
+					},
+					"syslogFormat": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of supported syslog message format.",
+							Default:     "",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
 					"targetNetworks": {
 						SchemaProps: spec.SchemaProps{
 							Description: "If empty, the enforcer auto-discovers the TCP networks. Auto-discovery works best in Kubernetes and OpenShift deployments. You may need to manually specify the TCP networks if middle boxes exist that do not comply with [TCP Fast Open RFC 7413](https://tools.ietf.org/html/rfc7413).",
@@ -1626,7 +1674,7 @@ func schema_goaporetoio_gaia_EnforcerProfile(ref common.ReferenceCallback) commo
 						},
 					},
 				},
-				Required: []string{"ID", "annotations", "associatedTags", "createTime", "description", "excludedInterfaces", "excludedNetworks", "ignoreExpression", "kubernetesMetadataExtractor", "kubernetesSupportEnabled", "metadata", "metadataExtractor", "name", "namespace", "normalizedTags", "propagate", "protected", "targetNetworks", "targetUDPNetworks", "trustedCAs", "updateTime"},
+				Required: []string{"ID", "annotations", "associatedTags", "createTime", "description", "excludedInterfaces", "excludedNetworks", "ignoreExpression", "kubernetesMetadataExtractor", "kubernetesSupportEnabled", "metadata", "metadataExtractor", "name", "namespace", "normalizedTags", "propagate", "protected", "syslogEnabled", "syslogEndpoint", "syslogEndpointTLSClientCertificate", "syslogEndpointTLSServerCA", "syslogFacility", "syslogFormat", "targetNetworks", "targetUDPNetworks", "trustedCAs", "updateTime"},
 			},
 		},
 	}
@@ -1905,7 +1953,7 @@ func schema_goaporetoio_gaia_NetworkRule(ref common.ReferenceCallback) common.Op
 						},
 					},
 				},
-				Required: []string{"action", "logsDisabled", "object", "observationEnabled", "protocolPorts"},
+				Required: []string{"action", "object", "protocolPorts"},
 			},
 		},
 		Dependencies: []string{
@@ -3060,6 +3108,48 @@ func schema_goaporetoio_gaia_SparseEnforcerProfile(ref common.ReferenceCallback)
 						SchemaProps: spec.SchemaProps{
 							Description: "Defines if the object is protected.",
 							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"syslogEnabled": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Enables syslog functionality of enforcers using this enforcerprofile.",
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
+					"syslogEndpoint": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the remote endpoint to dispatch the syslog messages.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"syslogEndpointTLSClientCertificate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "PEM-encoded certificate to expose to the clients for TLS.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"syslogEndpointTLSServerCA": {
+						SchemaProps: spec.SchemaProps{
+							Description: "PEM-encoded server CA certificate.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"syslogFacility": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of supported syslog facilities.",
+							Type:        []string{"integer"},
+							Format:      "int32",
+						},
+					},
+					"syslogFormat": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Contains the list of supported syslog message format.",
+							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
